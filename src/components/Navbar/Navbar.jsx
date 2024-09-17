@@ -38,7 +38,7 @@ export default function Navbar({ isHomePage }) {
               }}
             >
               {" "}
-              Agro Adviser
+              Agro Advisor
             </h3>
             {/* <img src={logo} alt="logo" /> */}
           </Link>

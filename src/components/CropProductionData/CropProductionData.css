@@ -20,6 +20,35 @@ table {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.filters {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.loading,
+.error,
+.no-records {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-wrap: wrap;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.even-row {
+    background-color: #f8f8f8;
+}
+
+.odd-row {
+    background-color: #ffffff;
+}
+
 th {
     background-color: #f3ce00;
     font-weight: bold;
