@@ -38,7 +38,7 @@ export function ExampleCrop({ mode, setmode }) {
   return (
     <>
       <Navbar isHomepage={false} mode={mode} setmode={setmode} />
-      <div className="backdrop-opacity-10 backdrop-invert bg-white/30">
+      <div className="container">
         <center>
           <h1 className="h1_E">Find your crop </h1>
         </center>

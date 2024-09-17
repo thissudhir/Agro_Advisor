@@ -50,14 +50,8 @@ const Home = ({ mode, setmode }) => {
   return (
     <>
       <Navbar isHomepage={false} mode={mode} setmode={setmode} />
-      <div
-        className="card-container"
-        style={{ backgroundColor: mode === "light" ? "white" : "" }}
-      >
-        <div
-          className="main"
-          style={{ backgroundColor: mode === "light" ? "white" : "" }}
-        >
+      <div className="card-container">
+        <div className="main">
           <div style={{ display: "flex" }}>
             <div className={`card glass "bg-light1"}`}>
               <button
@@ -84,7 +78,7 @@ const Home = ({ mode, setmode }) => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

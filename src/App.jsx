@@ -17,6 +17,7 @@ import Weather from "./components/Weather.js";
 import FAQ from "./components/faq/faq.jsx";
 import { ImageUpload } from "./components/ImageUpload/ImageUpload.jsx";
 import CropProductionData from "./components/CropProductionData/CropProductionData .jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 // import { HomePage } from "./components/HomePage/HomePage.jsx";
 // const Login = lazy(() => import("./components/Login"));
 // const Login = lazy(() => import("./components/Login"));

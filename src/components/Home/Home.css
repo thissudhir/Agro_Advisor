@@ -13,6 +13,8 @@ body {
   /* Prevent horizontal scrolling */
 }
 
+
+
 .main {
   position: relative;
   top: 90px;
@@ -35,18 +37,18 @@ body {
   border-radius: 8vw;
 } */
 
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 
-.content {
+/* .content {
   color: #00ffff;
-}
+} */
 
 img {
   width: 3rem;

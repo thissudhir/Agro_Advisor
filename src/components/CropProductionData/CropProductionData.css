@@ -51,6 +51,7 @@ table {
 
 th {
     background-color: #f3ce00;
+    position: sticky;
     font-weight: bold;
     text-align: left;
     padding: 0.75rem 1rem;
@@ -72,6 +73,19 @@ tr:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-input {
+        margin-bottom: 0.5rem;
+    }
+
     table {
         font-size: 0.875rem;
     }
@@ -79,6 +93,60 @@ tr:hover {
     th,
     td {
         padding: 0.5rem;
+    }
+
+    /* Convert table to cards for mobile */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .even-row,
+    .odd-row {
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .loading,
+    .error,
+    .no-records {
+        font-size: 1rem;
     }
 }
 

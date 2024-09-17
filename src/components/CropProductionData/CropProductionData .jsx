@@ -103,13 +103,13 @@ const CropProductionData = () => {
                   key={index}
                   className={index % 2 === 0 ? "even-row" : "odd-row"}
                 >
-                  <td>{item.state_name}</td>
-                  <td>{item.district_name}</td>
-                  <td>{item.crop}</td>
-                  <td>{item.crop_year}</td>
-                  <td>{item.season}</td>
-                  <td>{item.area_}</td>
-                  <td>{item.production_}</td>
+                  <td data-label="State">{item.state_name}</td>
+                  <td data-label="District">{item.district_name}</td>
+                  <td data-label="Crop">{item.crop}</td>
+                  <td data-label="Year">{item.crop_year}</td>
+                  <td data-label="Season">{item.season}</td>
+                  <td data-label="Area">{item.area_}</td>
+                  <td data-label="Production">{item.production_}</td>
                 </tr>
               ))}
             </tbody>

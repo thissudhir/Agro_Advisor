@@ -183,12 +183,13 @@ export function FormComponent() {
           <div className="form-left">
             <div className="form-left-one">
               <Link to="/" style={{ textDecoration: "none" }}>
-                <h1>Crop Recommendation</h1>
+                <h1>Agro Advisor</h1>
               </Link>
-              <h2>Crop Recommendation</h2>
+              <h2>Agro Advisor using Machine Learning</h2>
               <p className="form-left-one-para">
                 Get crops recommendation based on your soil and weather
-                conditions. Fill in the given form and get recommendations now.
+                conditions using Machine Learning. Fill in the given form and
+                get recommendations now.
               </p>
             </div>
             <div className="form-left-two">
