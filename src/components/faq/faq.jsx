@@ -74,7 +74,9 @@ const FAQ = ({ mode, setmode }) => {
         </div>
       ) : (
         <>
-          <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          <div style={{ position: "relative", zIndex: 3 }}>
+            <Navbar />
+          </div>
           {/* main section */}
           <div
             className="faq-section"

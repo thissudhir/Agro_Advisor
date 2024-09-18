@@ -177,7 +177,9 @@ export function FormComponent() {
 
   return (
     <>
-      <Navbar />
+      <div style={{ position: "relative", zIndex: 3 }}>
+        <Navbar />
+      </div>
       <div className="body">
         <div className="formCont">
           <div className="form-left">

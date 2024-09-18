@@ -71,7 +71,9 @@ const About = ({ mode, setmode }) => {
       ) : (
         <>
           {/* main section */}
-          <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          <div style={{ position: "relative", zIndex: 3 }}>
+            <Navbar />
+          </div>
           <div className={`aboutMain`}>
             <h1 className="about">🌾 What Is Agro Advisor❔ </h1>
             <div className="content">

@@ -68,7 +68,9 @@ export const Weather = ({ mode, setmode }) => {
                 </div>
             ) : (
                 <>
-                    <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+                    <div style={{ position: "relative", zIndex: 3 }}>
+                        <Navbar />
+                    </div>
                     <div id="weather-page">
                         <div className="maincontainer">
                             <h1>Weather</h1>
@@ -86,7 +88,7 @@ export const Weather = ({ mode, setmode }) => {
 
                             {errorMessage && <p className="error-message">{errorMessage}</p>}
                             {weatherData && (
-                                <div className='Weather'>
+                                <div className='Weather' style={{ position: "relative", zIndex: 2 }}>
                                     <WeatherCard weatherData={weatherData} />
                                 </div>
                             )}

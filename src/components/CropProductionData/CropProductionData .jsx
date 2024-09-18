@@ -63,7 +63,9 @@ const CropProductionData = () => {
 
   return (
     <>
-      <Navbar />
+      <div style={{ position: "relative", zIndex: 3 }}>
+        <Navbar />
+      </div>
       <div className="container">
         <h1>Crop Production Statistics from 1997</h1>
         <div className="filters">

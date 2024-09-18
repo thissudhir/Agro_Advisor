@@ -38,7 +38,8 @@ h1 {
   flex-direction: column;
   margin-top: 5vh;
   margin-bottom: 5vh;
-
+  position: relative;
+  z-Index: 1
 }
 
 #weather-page {

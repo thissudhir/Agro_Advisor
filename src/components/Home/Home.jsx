@@ -72,12 +72,14 @@ const Home = ({ mode, setmode }) => {
           //   display: "flex",
           // }}
           >
-            Agro Advisor
+            Agro Advisor for farmers
           </h3>
         </div>
       ) : (
         <>
-          <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          <div style={{ position: "relative", zIndex: 3 }}>
+            <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          </div>
           <div className="card-container">
             <div className="main">
               <div style={{ display: "flex" }}>
@@ -106,7 +108,9 @@ const Home = ({ mode, setmode }) => {
               </div>
             </div>
           </div>
-          <Footer />
+          <div style={{ position: "relative", zIndex: 3 }}>
+            <Footer />
+          </div>
         </>
       )}
     </>

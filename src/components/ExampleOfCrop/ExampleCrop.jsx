@@ -66,7 +66,9 @@ export function ExampleCrop({ mode, setmode }) {
         </div>
       ) : (
         <>
-          <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          <div style={{ position: "relative", zIndex: 3 }}>
+            <Navbar />
+          </div>
           <div className="container">
             <center>
               <h1 className="h1_E">Find your crop </h1>

@@ -30,21 +30,21 @@ export function HomePage() {
   }, []);
   return (
     <div>
-      <div>
-        <Navbar isHomepage={true}></Navbar>
+      <div style={{ position: "relative", zIndex: 3 }}>
+        <Navbar />
       </div>
       <div className={`aboutMain`}>
-        <h1 className="about">🌾 What Is CropForesight❔ </h1>
+        <h1 className="about">🌾 What Is Agro Advisor❔ </h1>
         <div className="content">
           <div className="left">
             <p>
-              CropForesight provides comprehensive agricultural solutions,
+              Agro Advisor provides comprehensive agricultural solutions,
               helping farmers and agriculture enthusiasts make informed
               decisions. Our platform offers crop recommendations by analyzing
               key environmental parameters—such as soil nitrogen and phosphorus
               levels, rainfall, pH, potassium, humidity, and temperature—to
               identify the optimal crop for maximum productivity and yield.
-              Additionally, CropForesight features a tomato plant disease
+              Additionally, Agro Advisor features a tomato plant disease
               classification tool that uses deep learning to detect potential
               issues from leaf images.
             </p>

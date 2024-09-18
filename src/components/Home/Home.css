@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,55 +11,48 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  /* Prevent horizontal scrolling */
-}
-
-
-
-.main {
+  background-image: url('https://img.freepik.com/premium-photo/quotiot-agriculture-smart-farming-equipment-realtime-monitoringquot_1168612-405887.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  top: 90px;
-  width: 100vw;
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  overflow: hidden;
-  /* Prevent vertical scrolling */
+  height: 100vh;
+
 }
 
-/* video {
-  width: 90%;
-  max-width: 150vw;
-  height: auto;
-  max-height: 60vh;
-  object-fit: fill;
-  border-radius: 8vw;
-} */
-
-/* .overlay {
-  position: absolute;
+/* Full-screen overlay */
+body::after {
+  content: '';
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-} */
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  height: 100vh;
+}
 
-/* .content {
-  color: #00ffff;
-} */
+/* Main content container */
+.main {
+  position: relative;
+  top: 90px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
 
+/* Image styles */
 img {
   width: 3rem;
 }
 
+/* Text styles */
 .text {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  justify-content: center;
   margin-top: 2rem;
   position: absolute;
   top: 50%;
@@ -66,17 +60,15 @@ img {
   transform: translate(-50%, -50%);
 }
 
-
-
+/* Paragraph styles */
 .para {
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
-  margin: 1.5rem 2rem 1.5rem 2rem;
-  /* Increase or decrease the gap between text and para */
-  /* Increase or decrease the gap between text and para */
+  margin: 1.5rem 2rem;
 }
 
+/* Card container */
 .card-container {
   display: flex;
   justify-content: center;
@@ -85,25 +77,21 @@ img {
   height: 100%;
 }
 
+/* Card styles */
 .card {
   border-radius: 8px;
-  padding: 0px 30px 0px 30px;
+  padding: 0 30px;
   width: 60vw;
   max-width: 400px;
   height: 170px;
   margin-top: 1rem;
-  /*margin-bottom: 2rem; */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  /* text-align: center; */
 }
 
-.purple {
-  color: rgb(152, 100, 201);
-}
-
+/* Button styles */
 .button {
   width: 8rem;
   height: 1rem;
@@ -119,30 +107,25 @@ img {
   border-radius: 4px;
 }
 
-.button-1:hover {
-  color: #f3ce00;
+.button:hover {
   background-color: aliceblue;
+  color: #f3ce00;
   box-shadow: 1px 1px 1px 1px #f3ce00;
   transition: background-color 0.5s ease;
 }
 
-.button:hover {
-  background-color: #f3ce00;
-}
-
+/* Responsive design */
 @media only screen and (max-width: 1023px) {
   .text {
     position: static;
     transform: none;
-    font-size: 1.8 rem;
+    font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 855px) {
   .main {
-    /* text-align: center; */
     overflow: auto;
-    /* Allow scrolling for smaller screens */
   }
 
   .text {
@@ -155,14 +138,10 @@ img {
 
   .card {
     width: 90vw;
-    max-width: 400px;
-    /* margin-top: 1rem;
-    margin-bottom: 1rem; */
   }
 
   video {
     width: 95vw;
-    height: auto;
     max-height: 60vh;
   }
 
@@ -177,11 +156,7 @@ img {
   }
 
   .para {
-    margin: 1rem 2rem 0rem 2rem;
-
-    /* margin-bottom: 2rem; */
-
-    /* text-align: left; */
+    margin: 1rem 2rem 0;
   }
 }
 
@@ -199,19 +174,10 @@ img {
 @media only screen and (max-width: 480px) {
   .card-container {
     flex-direction: column;
-    align-items: center;
   }
-
-  /* 
-  video {
-    width: 90vw;
-    height: auto;
-    max-height: 40vh;
-  } */
 
   .text {
     font-size: 1.5rem;
-    position: absolute;
     top: 1rem;
     right: 3rem;
     left: 3rem;
@@ -221,13 +187,10 @@ img {
     width: 90vw;
     max-width: 300px;
     height: 170px;
-    /* margin-top: 1rem;
-    margin-bottom: 1rem; */
   }
 
   .para {
-    justify-content: center;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
   }
 
   .button {
@@ -235,25 +198,10 @@ img {
   }
 }
 
-/* Added: Media query for iPad Air and iPad Mini */
-@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait),
-only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+/* iPad Air and iPad Mini specific styles */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
   .text {
-    top: 0.0000000000000001rem;
-    /* Adjust the value as needed */
-  }
-
-  .para {
-    margin-top: 5rem;
-    justify-content: center;
-  }
-}
-
-@media only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait),
-only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
-  .text {
-    top: 0.0000000000000001rem;
-    /* Adjust the value as needed */
+    top: 0.0001rem;
   }
 
   .para {
@@ -261,9 +209,19 @@ only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-d
   }
 }
 
+@media only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) {
+  .text {
+    top: 0.0001rem;
+  }
+
+  .para {
+    margin-top: 5rem;
+  }
+}
+
+/* Larger screens (min-width: 1024px) */
 @media only screen and (min-width: 1024px) {
   .card {
-    /* position: relative; */
     height: 170px;
   }
 
@@ -278,32 +236,19 @@ only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-d
 
   .video {
     width: 95vw;
-    height: auto;
     max-height: 20vh;
   }
 
   .text {
-    top: 0.00000001rem;
+    top: 0.0001rem;
     font-size: 130%;
   }
 
   .para {
     margin-bottom: 3px;
     margin-top: 1rem;
-    /* Added: Set margin-top to push the paragraph below the text */
-  }
-
-  @media only screen and (min-width: 1024px) and (max-height: 600px) {
-    .button {
-      top: 88%;
-      left: 56%;
-    }
   }
 }
-
-/* .button-1 {
-  height: 50px;
-} */
 
 .text-black {
   color: black;
