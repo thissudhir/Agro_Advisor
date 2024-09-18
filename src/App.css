@@ -198,6 +198,10 @@ button {
   animation: close 0.2s forwards 1.25s;
 }
 
+.center-logo h3 {
+  font-size: 9.1rem;
+}
+
 @keyframes close {
   100% {
     opacity: 1;
@@ -208,12 +212,20 @@ button {
   .body {
     height: 900px;
   }
+
+  .center-logo h3 {
+    font-size: 5rem;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .body {
     height: auto;
     padding-bottom: 0;
+  }
+
+  .center-logo h3 {
+    font-size: 2rem;
   }
 
   form {
@@ -292,6 +304,10 @@ button {
 @media (min-width: 768px) and (max-width: 820px) {
   .body {
     height: 1200px;
+  }
+
+  .center-logo h3 {
+    font-size: 5rem;
   }
 
   form {

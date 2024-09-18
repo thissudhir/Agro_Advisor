@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faYoutube, faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 
@@ -9,10 +9,10 @@ const Footer = () => {
     <footer>
       <div className="footer">
         <div className="row">
-          <a className='logo' href="#"><FontAwesomeIcon icon={faFacebook} size='3x' /></a>
-          <a className='logo' href="#"><FontAwesomeIcon icon={faInstagram} size='3x' /></a>
-          <a className='logo' href="#"><FontAwesomeIcon icon={faYoutube} size='3x' /></a>
-          <a className='logo' href="#"><FontAwesomeIcon icon={faTwitter} size='3x' /></a>
+          <a className='link' href="#"><FontAwesomeIcon icon={faFacebook} size='3x' /></a>
+          <a className='link' href="https://www.instagram.com/shrutitripathi162/" target="_blank"><FontAwesomeIcon icon={faInstagram} size='3x' /></a>
+          <a className='link' href="https://github.com/shrutitripathi162" target="_blank"><FontAwesomeIcon icon={faGithub} size='3x' /></a>
+          <a className='link' href="https://www.linkedin.com/in/shruti-tripathi1602/" target="_blank"><FontAwesomeIcon icon={faLinkedin} size='3x' /></a>
         </div>
 
         {/* <div className="row">

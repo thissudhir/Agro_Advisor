@@ -58,19 +58,19 @@ const Home = ({ mode, setmode }) => {
       {logoVisible ? (
         <div className="center-logo">
           <h3
-            style={{
-              width: "100%",
-              height: "100%",
-              marginTop: "7px",
+          // style={{
+          //   width: "100%",
+          //   height: "100%",
+          //   marginTop: "7px",
 
-              color: "#f3ce00",
-              fontSize: { xs: "5.1rem", md: "9.1rem", sm: "5.1rem" },
-              fontWeight: "bold",
-              textDecoration: "none",
-              alignItems: "center",
-              justifyContent: "center",
-              display: "flex",
-            }}
+          //   color: "#f3ce00",
+          //   // fontSize: "9.1rem",
+          //   fontWeight: "bold",
+          //   textDecoration: "none",
+          //   alignItems: "center",
+          //   justifyContent: "center",
+          //   display: "flex",
+          // }}
           >
             Agro Advisor
           </h3>

@@ -46,7 +46,7 @@ const FAQ = ({ mode, setmode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLogoVisible(false);
-    }, 5000);
+    }, 1000);
     return () => clearTimeout(timer);
   });
 
@@ -61,7 +61,7 @@ const FAQ = ({ mode, setmode }) => {
               marginTop: "7px",
 
               color: "#f3ce00",
-              fontSize: { xs: "5.1rem", md: "9.1rem", sm: "5.1rem" },
+              // fontSize: "9.1rem",
               fontWeight: "bold",
               textDecoration: "none",
               alignItems: "center",

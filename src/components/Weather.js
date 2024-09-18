@@ -15,7 +15,7 @@ export const Weather = ({ mode, setmode }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLogoVisible(false);
-        }, 3000);
+        }, 1000);
         return () => clearTimeout(timer);
     });
     const handleWeather = async (e) => {
@@ -55,7 +55,7 @@ export const Weather = ({ mode, setmode }) => {
                             marginTop: "7px",
 
                             color: "#f3ce00",
-                            fontSize: { xs: "5.1rem", md: "9.1rem", sm: "5.1rem" },
+                            // fontSize: "9.1rem",
                             fontWeight: "bold",
                             textDecoration: "none",
                             alignItems: "center",

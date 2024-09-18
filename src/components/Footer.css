@@ -24,6 +24,9 @@ footer {
     padding: 0.6% 0%;
     color: gray;
     font-size: 0.8em;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer .row a {
@@ -33,7 +36,7 @@ footer {
 }
 
 .footer .row a:hover {
-    color: #fff;
+    color: #f3ce00;
 }
 
 .footer .row ul {

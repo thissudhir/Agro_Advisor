@@ -48,7 +48,7 @@ const Contact = ({ mode, setmode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLogoVisible(false);
-    }, 5000);
+    }, 1000);
     return () => clearTimeout(timer);
   });
   const sentences = [
@@ -126,7 +126,7 @@ const Contact = ({ mode, setmode }) => {
               marginTop: "7px",
 
               color: "#f3ce00",
-              fontSize: { xs: "5.1rem", md: "9.1rem", sm: "5.1rem" },
+              // fontSize: "9.1rem",
               fontWeight: "bold",
               textDecoration: "none",
               alignItems: "center",
@@ -168,7 +168,7 @@ const Contact = ({ mode, setmode }) => {
                       </span>
                       {/* <span>nassosanagn@gmail.com</span> */}
                       <span>
-                        <a href="mailto:">
+                        <a href="mailto:shrutitripathi1602@gmail.com">
                           shrutitripathi1602@gmail.com
                         </a>
                       </span>
@@ -177,22 +177,34 @@ const Contact = ({ mode, setmode }) => {
                       <span>
                         <i class="fa fa-phone"></i>
                       </span>
-                      <span>+918077823980</span>
+                      <span>
+                        <a href="tel:shrutitripathi1602@gmail.com">
+                          +918077823980
+                        </a>
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <ul className="sci">
                   <li>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a className="link" href="#" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
                   </li>
                   <li>
-                    <i class="fa-brands fa-facebook"></i>
+                    <a className="link" href="https://github.com/shrutitripathi162" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
                   </li>
                   <li>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a className="link" href="https://www.instagram.com/shrutitripathi162/" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
                   </li>
                   <li>
-                    <i class="fa-brands fa-google"></i>
+                    <a className="link" href="https://www.linkedin.com/in/shruti-tripathi1602/" target="_blank">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
                   </li>
                 </ul>
               </div>

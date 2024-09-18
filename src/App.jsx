@@ -49,11 +49,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/ImageUpload" element={<ImageUpload />} />
+            {/* <Route path="/ImageUpload" element={<ImageUpload />} /> */}
             <Route path="/govt-data" element={<CropProductionData />} />
             <Route path="/Weather" element={<Weather />} />
             <Route path="/ExampleCrop" element={<ExampleCrop />} />
-            <Route path="/contributors" element={<Contributor />} />
+            {/* <Route path="/contributors" element={<Contributor />} /> */}
             <Route path="/*" element={<Err />} />
           </Routes>
         </Suspense>
