@@ -36,7 +36,7 @@ const openInNewTab = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 
-const Contact = ({mode,setmode}) => {
+const Contact = ({ mode, setmode }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -125,11 +125,11 @@ const Contact = ({mode,setmode}) => {
                     <i class="fa fa-location"></i>
                   </span>
                   <span>
-                    184 Ippokratous Street
-                    <br />
+                    D-44 BHSL, Meerut
+                    {/* <br />
                     Athens, Gr
                     <br />
-                    11472
+                    11472 */}
                   </span>
                 </li>
                 <li>
@@ -139,7 +139,7 @@ const Contact = ({mode,setmode}) => {
                   {/* <span>nassosanagn@gmail.com</span> */}
                   <span>
                     <a href="mailto:">
-                      okfine@gmamail.com
+                      shrutitripathi1602@gmail.com
                     </a>
                   </span>
                 </li>
@@ -147,7 +147,7 @@ const Contact = ({mode,setmode}) => {
                   <span>
                     <i class="fa fa-phone"></i>
                   </span>
-                  <span>1234567856</span>
+                  <span>+918077823980</span>
                 </li>
               </ul>
             </div>
@@ -162,7 +162,7 @@ const Contact = ({mode,setmode}) => {
                 <i class="fa-brands fa-instagram"></i>
               </li>
               <li>
-              <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-google"></i>
               </li>
             </ul>
           </div>
@@ -171,23 +171,23 @@ const Contact = ({mode,setmode}) => {
             <div className="formBox">
               <div className="inputBox w50">
                 <input type="text" name="" required="" />
-                <span className={mode === 'dark' ? "text-dark": ""}>First Name</span>
+                <span className={mode === 'dark' ? "text-dark" : ""}>First Name</span>
               </div>
               <div className="inputBox w50">
                 <input type="text" required="" />
-                <span className={mode === 'dark' ? "text-dark": ""}>Last Name</span>
+                <span className={mode === 'dark' ? "text-dark" : ""}>Last Name</span>
               </div>
               <div className="inputBox w50">
                 <input type="email" required="" />
-                <span className={mode === 'dark' ? "text-dark": ""}>Email Address</span>
+                <span className={mode === 'dark' ? "text-dark" : ""}>Email Address</span>
               </div>
               <div className="inputBox w50">
                 <input type="text" required="" />
-                <span className={mode === 'dark' ? "text-dark": ""}>Mobile Number</span>
+                <span className={mode === 'dark' ? "text-dark" : ""}>Mobile Number</span>
               </div>
               <div className="inputBox w100">
                 <textarea required="" defaultValue={""} />
-                <span className={mode === 'dark' ? "text-dark": ""}>Write your message here...</span>
+                <span className={mode === 'dark' ? "text-dark" : ""}>Write your message here...</span>
               </div>
               <div className="inputBox w100">
                 <input type="submit" defaultValue="Send" />
