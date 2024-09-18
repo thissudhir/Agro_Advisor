@@ -42,8 +42,15 @@ const Contact = ({ mode, setmode }) => {
     email: "",
     message: "",
   });
+  const [logoVisible, setLogoVisible] = useState(true);
   const [error, setError] = useState({});
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLogoVisible(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  });
   const sentences = [
     "Have A Question ❓",
     "Want To contact me ?",
@@ -110,92 +117,116 @@ const Contact = ({ mode, setmode }) => {
 
   return (
     <div>
-      {/* nav bar */}
-      <Navbar isHomepage={false} mode={mode} setmode={setmode} />
-      {/* contact us form */}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <main className="sectionIO">
-        <div className="containerIO">
-          <div className="contactInfo">
-            <div>
-              <h2>Contact Info</h2>
-              <ul className="info">
-                <li>
-                  <span>
-                    <i class="fa fa-location"></i>
-                  </span>
-                  <span>
-                    D-44 BHSL, Meerut
-                    {/* <br />
+      {logoVisible ? (
+        <div className="center-logo">
+          <h3
+            style={{
+              width: "100%",
+              height: "100%",
+              marginTop: "7px",
+
+              color: "#f3ce00",
+              fontSize: { xs: "5.1rem", md: "9.1rem", sm: "5.1rem" },
+              fontWeight: "bold",
+              textDecoration: "none",
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            Contacts
+          </h3>
+        </div>
+      ) : (
+        <>
+
+          {/* nav bar */}
+          <Navbar isHomepage={false} mode={mode} setmode={setmode} />
+          {/* contact us form */}
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <main className="sectionIO">
+            <div className="containerIO">
+              <div className="contactInfo">
+                <div>
+                  <h2>Contact Info</h2>
+                  <ul className="info">
+                    <li>
+                      <span>
+                        <i class="fa fa-location"></i>
+                      </span>
+                      <span>
+                        D-44 BHSL, Meerut
+                        {/* <br />
                     Athens, Gr
                     <br />
                     11472 */}
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                  {/* <span>nassosanagn@gmail.com</span> */}
-                  <span>
-                    <a href="mailto:">
-                      shrutitripathi1602@gmail.com
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <i class="fa fa-phone"></i>
-                  </span>
-                  <span>+918077823980</span>
-                </li>
-              </ul>
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                      {/* <span>nassosanagn@gmail.com</span> */}
+                      <span>
+                        <a href="mailto:">
+                          shrutitripathi1602@gmail.com
+                        </a>
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <span>+918077823980</span>
+                    </li>
+                  </ul>
+                </div>
+                <ul className="sci">
+                  <li>
+                    <i class="fa-brands fa-twitter"></i>
+                  </li>
+                  <li>
+                    <i class="fa-brands fa-facebook"></i>
+                  </li>
+                  <li>
+                    <i class="fa-brands fa-instagram"></i>
+                  </li>
+                  <li>
+                    <i class="fa-brands fa-google"></i>
+                  </li>
+                </ul>
+              </div>
+              <div className={`contactForm ${mode === 'dark' ? "contactFormDark " : ""}`}>
+                <h2>Send a Message</h2>
+                <div className="formBox">
+                  <div className="inputBox w50">
+                    <input type="text" name="" required="" />
+                    <span className={mode === 'dark' ? "text-dark" : ""}>First Name</span>
+                  </div>
+                  <div className="inputBox w50">
+                    <input type="text" required="" />
+                    <span className={mode === 'dark' ? "text-dark" : ""}>Last Name</span>
+                  </div>
+                  <div className="inputBox w50">
+                    <input type="email" required="" />
+                    <span className={mode === 'dark' ? "text-dark" : ""}>Email Address</span>
+                  </div>
+                  <div className="inputBox w50">
+                    <input type="text" required="" />
+                    <span className={mode === 'dark' ? "text-dark" : ""}>Mobile Number</span>
+                  </div>
+                  <div className="inputBox w100">
+                    <textarea required="" defaultValue={""} />
+                    <span className={mode === 'dark' ? "text-dark" : ""}>Write your message here...</span>
+                  </div>
+                  <div className="inputBox w100">
+                    <input type="submit" defaultValue="Send" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul className="sci">
-              <li>
-                <i class="fa-brands fa-twitter"></i>
-              </li>
-              <li>
-                <i class="fa-brands fa-facebook"></i>
-              </li>
-              <li>
-                <i class="fa-brands fa-instagram"></i>
-              </li>
-              <li>
-                <i class="fa-brands fa-google"></i>
-              </li>
-            </ul>
-          </div>
-          <div className={`contactForm ${mode === 'dark' ? "contactFormDark " : ""}`}>
-            <h2>Send a Message</h2>
-            <div className="formBox">
-              <div className="inputBox w50">
-                <input type="text" name="" required="" />
-                <span className={mode === 'dark' ? "text-dark" : ""}>First Name</span>
-              </div>
-              <div className="inputBox w50">
-                <input type="text" required="" />
-                <span className={mode === 'dark' ? "text-dark" : ""}>Last Name</span>
-              </div>
-              <div className="inputBox w50">
-                <input type="email" required="" />
-                <span className={mode === 'dark' ? "text-dark" : ""}>Email Address</span>
-              </div>
-              <div className="inputBox w50">
-                <input type="text" required="" />
-                <span className={mode === 'dark' ? "text-dark" : ""}>Mobile Number</span>
-              </div>
-              <div className="inputBox w100">
-                <textarea required="" defaultValue={""} />
-                <span className={mode === 'dark' ? "text-dark" : ""}>Write your message here...</span>
-              </div>
-              <div className="inputBox w100">
-                <input type="submit" defaultValue="Send" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+          </main>
+        </>)}
     </div>
   );
 };

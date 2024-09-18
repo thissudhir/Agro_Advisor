@@ -10,15 +10,8 @@ export default function Navbar({ isHomePage }) {
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
-  const [logoVisible, setLogoVisible] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLogoVisible(false);
-    }, 5000); // Show the logo for 3 seconds
-
-    return () => clearTimeout(timer); // Clean up the timer on unmount
-  }, []);
+  useEffect(() => {}, []);
   function closeMenu() {
     setShowMenu(false);
   }
