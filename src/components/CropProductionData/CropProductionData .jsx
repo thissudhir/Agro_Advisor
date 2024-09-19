@@ -2,24 +2,46 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./CropProductionData.css";
 
-const BASE_API_URL =
-  "https://api.data.gov.in/resource/35be999b-0208-4354-b557-f6ca9a5355de";
-const API_KEY = "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341";
+const API_CONFIG = {
+  cropProduction: {
+    url: "https://api.data.gov.in/resource/35be999b-0208-4354-b557-f6ca9a5355de",
+    key: "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341",
+    filters: [
+      "production",
+      "area",
+      "crop",
+      "season",
+      "crop_year",
+      "district_name",
+      "state_name",
+    ],
+  },
+  // Add more APIs here
+  agriculturalYield: {
+    url: "https://api.data.gov.in/resource/29a238ff-dc58-4de6-8da2-0e43389e8edf", // Replace with actual API URL
+    key: "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341",
+    filters: ["crop", "variety", "commodity"],
+  },
+};
 
 const CropProductionData = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedAPI, setSelectedAPI] = useState("cropProduction");
   const [filters, setFilters] = useState({
     limit: 10,
-    production: "",
-    area: "",
-    crop: "",
-    season: "",
-    crop_year: "",
-    district_name: "",
-    state_name: "",
   });
+
+  useEffect(() => {
+    // Reset filters when API changes
+    setFilters({
+      limit: 10,
+      ...Object.fromEntries(
+        API_CONFIG[selectedAPI].filters.map((filter) => [filter, ""])
+      ),
+    });
+  }, [selectedAPI]);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -29,14 +51,19 @@ const CropProductionData = () => {
     }));
   };
 
+  const handleAPIChange = (e) => {
+    setSelectedAPI(e.target.value);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       setError(null);
       try {
-        let url = `${BASE_API_URL}?api-key=${API_KEY}&format=json&limit=${filters.limit}`;
+        const apiConfig = API_CONFIG[selectedAPI];
+        let url = `${apiConfig.url}?api-key=${apiConfig.key}&format=json&limit=${filters.limit}`;
         Object.entries(filters).forEach(([key, value]) => {
-          if (value && key !== "limit") {
+          if (value && key !== "limit" && apiConfig.filters.includes(key)) {
             url += `&filters[${key}]=${encodeURIComponent(value)}`;
           }
         });
@@ -59,7 +86,7 @@ const CropProductionData = () => {
       }
     };
     fetchData();
-  }, [filters]);
+  }, [filters, selectedAPI]);
 
   return (
     <>
@@ -67,7 +94,19 @@ const CropProductionData = () => {
         <Navbar />
       </div>
       <div className="container">
-        <h1>Crop Production Statistics from 1997</h1>
+        <div className="header">
+          <select
+            value={selectedAPI}
+            onChange={handleAPIChange}
+            className="api-selector"
+          >
+            {Object.keys(API_CONFIG).map((api) => (
+              <option key={api} value={api}>
+                {api.split(/(?=[A-Z])/).join(" ")}
+              </option>
+            ))}
+          </select>
+        </div>
         <div className="filters">
           {Object.entries(filters).map(([key, value]) => (
             <input
@@ -90,13 +129,9 @@ const CropProductionData = () => {
           <table>
             <thead>
               <tr>
-                <th>State</th>
-                <th>District</th>
-                <th>Crop</th>
-                <th>Year</th>
-                <th>Season</th>
-                <th>Area</th>
-                <th>Production</th>
+                {Object.keys(data[0]).map((key) => (
+                  <th key={key}>{key.replace("_", " ")}</th>
+                ))}
               </tr>
             </thead>
             <tbody>
@@ -105,13 +140,11 @@ const CropProductionData = () => {
                   key={index}
                   className={index % 2 === 0 ? "even-row" : "odd-row"}
                 >
-                  <td data-label="State">{item.state_name}</td>
-                  <td data-label="District">{item.district_name}</td>
-                  <td data-label="Crop">{item.crop}</td>
-                  <td data-label="Year">{item.crop_year}</td>
-                  <td data-label="Season">{item.season}</td>
-                  <td data-label="Area">{item.area_}</td>
-                  <td data-label="Production">{item.production_}</td>
+                  {Object.values(item).map((value, i) => (
+                    <td key={i} data-label={Object.keys(item)[i]}>
+                      {value}
+                    </td>
+                  ))}
                 </tr>
               ))}
             </tbody>

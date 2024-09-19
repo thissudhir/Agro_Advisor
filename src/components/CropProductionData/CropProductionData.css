@@ -20,6 +20,26 @@ table {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.header {
+    margin-bottom: 20px;
+}
+
+.api-selector {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #f3ce00;
+    font-weight: bold
+}
+
+.api-selector:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
 .filters {
     display: flex;
     gap: 13px;

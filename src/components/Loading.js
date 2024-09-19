@@ -6,7 +6,7 @@ const Loading = () => {
     <div id="spinner" className="center-loader">
       <img src={logo} alt="preloading screen" />
       <div className="pre-text">
-        <p>Welcome to <br /><span>Crop Foresight</span></p>
+        <p>Welcome to <br /><span>Agro Advisor</span></p>
       </div>
     </div>
   );

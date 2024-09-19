@@ -35,7 +35,7 @@ Agro Advisor is an advanced website designed to assist farmers and agriculture e
 
 To experience the power of Agro Advisor, follow these simple steps:
 
-✅ Visit the Agro Advisor website: [https://thissudhir.github.io/Agro_Advisor/](https://thissudhir.github.io/Agro_Advisor/).
+✅ Visit the Agro Advisor website: [https://agro-advisor.vercel.app/](https://agro-advisor.vercel.app/).
 
 ✅ Enter the required details such as soil nitrogen value, phosphorus value, rainfall, pH, potassium, humidity, and temperature.
 

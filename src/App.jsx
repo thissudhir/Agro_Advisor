@@ -11,11 +11,11 @@ import { FormComponent } from "./components/Form/FormComponent.jsx";
 import Err from "./components/404page/404.jsx";
 // import About from "./components/About/about.jsx";
 import Contact from "./components/Contact/contact.js";
-import Contributor from "./components/Contributors/Contributor.jsx";
+
 // import Home from "./components/Home/Home.js";
 import Weather from "./components/Weather.js";
 import FAQ from "./components/faq/faq.jsx";
-import { ImageUpload } from "./components/ImageUpload/ImageUpload.jsx";
+
 import CropProductionData from "./components/CropProductionData/CropProductionData .jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 // import { HomePage } from "./components/HomePage/HomePage.jsx";
@@ -49,11 +49,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
-            {/* <Route path="/ImageUpload" element={<ImageUpload />} /> */}
+
             <Route path="/govt-data" element={<CropProductionData />} />
             <Route path="/Weather" element={<Weather />} />
             <Route path="/ExampleCrop" element={<ExampleCrop />} />
-            {/* <Route path="/contributors" element={<Contributor />} /> */}
+
             <Route path="/*" element={<Err />} />
           </Routes>
         </Suspense>

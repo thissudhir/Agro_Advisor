@@ -13,7 +13,7 @@
    text-shadow: 0px 2px 0px #f3ce00;
    text-align: center;
    font-size: 40px;
-   color: #f3ce00;
+   /* color: #f3ce00; */
  }
 
  .faq-main {
@@ -108,7 +108,7 @@
    text-align: left;
    width: 100%;
    padding: 1em 0;
-   color: #ACBD45;
+   color: #fff;
    font-family: 'Londrina Solid', cursive;
    font-size: 1.13rem;
    font-weight: 400;
@@ -120,13 +120,13 @@
 
  .accordion button:hover,
  .accordion button:focus {
-   color: #ACBD45;
+   color: #fff;
 
  }
 
  .accordion button:hover::after,
  .accordion button:focus::after {
-   color: #ACBD45;
+   color: #fff;
    border: 1px solid #fff;
 
  }
@@ -172,7 +172,7 @@
  }
 
  .accordion button[aria-expanded='true'] {
-   color: #ACBD45;
+   color: #fff;
  }
 
  .accordion button[aria-expanded='true'] .icon::after {
@@ -200,8 +200,8 @@
    font-weight: 300;
    font-family: 'Poppins';
    margin: 1.6em 0;
-   color: #ACBD45;
-   opacity: 0.6;
+   color: #fff;
+   opacity: 0.9;
  }
 
  @media (max-width: 750px) {
