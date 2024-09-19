@@ -18,9 +18,19 @@ const API_CONFIG = {
   },
   // Add more APIs here
   agriculturalYield: {
-    url: "https://api.data.gov.in/resource/29a238ff-dc58-4de6-8da2-0e43389e8edf", // Replace with actual API URL
+    url: "https://api.data.gov.in/resource/29a238ff-dc58-4de6-8da2-0e43389e8edf",
     key: "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341",
     filters: ["crop", "variety", "commodity"],
+  },
+  MinimumSupportPrice: {
+    url: "https://api.data.gov.in/resource/9eaaa510-83c9-4071-96d8-f8bbef1a019d",
+    key: "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341",
+    filters: ["commodity", "msp_in_rs_per_quintal_"],
+  },
+  DailyPriceOfMandi: {
+    url: "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070",
+    key: "579b464db66ec23bdd000001fcd5e6308e814be9692f670650825341",
+    filters: ["grade", "variety", "commodity", "market", "district", "state"],
   },
 };
 
